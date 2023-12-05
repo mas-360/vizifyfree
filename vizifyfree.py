@@ -23,7 +23,7 @@ st.set_page_config(
     layout="wide"
 )
 
-img_logo = Image.open("C:/Users/27823/MASINSIGHT/econforbus/vizify/images/vizifysmall.PNG")
+img_logo = Image.open("images/vizifysmall.PNG")
 st.image(img_logo)
 
 st.markdown("---")
