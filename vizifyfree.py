@@ -86,7 +86,7 @@ if selected_dataset_label != "Select a dataset":
     selected_dataset = [dataset["url"] for dataset in datasets if dataset["label"] == selected_dataset_label][0]
 
     # Generate summary only if a dataset is selected
-    lida = Manager(text_gen=llm("openai", api_key="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"))
+    lida = Manager(text_gen=llm("openai", api_key=None))
     textgen_config = TextGenerationConfig(n=1, temperature=0.1, model="gpt-3.5-turbo-16k", use_cache=True)
 
     # Generate the summary
@@ -101,7 +101,7 @@ if not summary:
 
 # Step 3 - Generate data summary
 if selected_dataset:
-    lida = Manager(text_gen=llm("openai", api_key="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"))
+    lida = Manager(text_gen=llm("openai", api_key=None))
     textgen_config = TextGenerationConfig(
         n=1,
         temperature=0.1,
